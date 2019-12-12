@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<head>
+  
+  <html lang="en" dir="ltr">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width = device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <script src="https://js.stripe.com/v3/"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="stylesheet.css">
+  <title>People's Choice</title>
+</head>
+
+<body>
+  <div class="container-fluid">
+
+    <div class="row no-gutters topMenu">
+      <nav class="navbar fixed-top navbar-light bg-light ">
+        <div class="col-3 menuBar">
+          <h5>
+            <a href="#openingTitle">
+              About
+              <br>Us
+            </a>
+          </h5>
+        </div>
+        <div class="col-3 menuBar">
+          <h5>
+            <b>
+              <span>
+                <a href="#introToMain">
+                  Order
+                  <br>Here</a>
+            </b>
+            </span>
+          </h5>
+        </div>
+        <div class="col-3 menuBar" id="yourOrder">
+          <h5 id="yourOrderContent">
+            <a data-toggle="modal" href="#order">
+              Your
+              <br> Order
+            </a>
+            <a id="orderqty" data-toggle="modal" href="#order"> </a>
+          </h5>
+        </div>
+        <div class="col-3 menuBar">
+          <h5>
+
+            <a href="#caterMenuHeading">
+              Catering
+              <br> Service!
+
+          </h5>
+        </div>
+      </nav>
+    </div>
+
+    <div class="row no-gutters" id="frontPage">
+      <div class="col-12 d-block d-md-none" id="logo1">
+        <b>
+          <span>
+            <b></b>People's </br>Choice</span>
+          <br>
+        </b>
+      </div>
+      <div class="col-12	d-none d-md-block" id="logo1">
+        <b>
+          <span>People's </br> Choice</b>
+        </span>
+        <br>
+      </div>
+    </div>
+    <div class="col-12 col-sm-12" id="openingTitle">
+      <b>
+        <span>
+          <h4>The Jamaican Restaurant of Norwalk Since 1998</h4>
+      </b>
+      </span>
+    </div>
+    <div class="row no-gutters">
+
+      <div class="col-12" id="contactInfo">
+        <a href="tel:203-838-8272" id="telephone"> (203) 838-8272 </a> |
+        <a href="https://goo.gl/maps/6ke9ZAo6wrE94woV7" id="map">77 Wall Street, Norwalk,CT</a>| 8:00AM to 10:00PM
+      </div>
+
+      <div class="col-none-12 col-md-6">
+        <img src="https://i.ibb.co/0GgtTfq/Capture2.jpg" class="img-fluid">
+      </div>
+
+      <div class="col-none-12 col-md-6">
+        <p id="aboutUsContent">We are a Jamaican family that has traveled across the seas to locate at our new home in Norwalk, CT. This establishment
+          has fed my family, and the people of Norwalk ever sinceWe are a Jamaican family that has traveled across the seas
+          to locate at our new home in Norwalk, CT. This establishment has fed my family, and the people of Norwalk ever
+          since.We are a Jamaican family that has traveled across the seas to locate at our new home in Norwalk, CT. This
+          establishment has fed my family, and the people of Norwalk ever since.We are a Jamaican family that has traveled
+          across the seas to locate at our new home in Norwalk, CT. This establishment has fed my family, and the people
+          of Norwalk ever since..</p>
+      </div>
+    </div>
+
+    <div class="col-12" id="introToMain">
+      </hr>
+    </div>
+
+    <div class="col-12 col-sm-12 mainMenuHeading">
+      <h1 class="menutitle">
+        <br>
+        <b>
+          <u>Main Menu</u>
+          <br>
+        </b>
+      </h1>
+      <br>
+    </div>
+
+
+    <div class="row no-gutters">
+
+      <div class="d-none imgFrame">
+        <ul>
+          <li>Click the Name of the Dish to View Image.</li>
+          <img src="https://i.ibb.co/rM9LN92/Jamaica-callallou-2000x2000.png" class="img-fluid menuPhoto " id="callallouPhoto" alt="Callallou">
+          <img src="https://i.pinimg.com/originals/8f/29/03/8f2903ac1afd60aba0d875d862139441.jpg" title="https://i.pinimg.com/originals/8f/29/03/8f2903ac1afd60aba0d875d862139441.jpg"
+            class="img-fluid menuPhoto " id="friedChickenPhoto" alt="Fried Chicken">
+          <img src="https://i.pinimg.com/originals/9b/a2/30/9ba2300e7055171ccbc0eabca0ad5cfd.jpg" class="img-fluid menuPhoto " id="oxtailPhoto"
+            alt="Oxtail">
+          <img src="https://www.jamaica-land-we-love.com/images/jamaican-cow-foot-recipe.jpg" class="img-fluid menuPhoto " id="cowFootPhoto"
+            alt="Cow Foot">
+          <img src="https://jamaicans.com/wp-content/uploads/Buzzfeed-Lists-21-Little-Known-but-Classic-Jamaican-Dishes-Stew-Peas-810x664.jpg"
+            class="img-fluid menuPhoto " id="stewPeasPhoto" alt="Stew Peas">
+          <img src="https://www.seriouseats.com/recipes/images/2013/04/040313-246922-Sunday-Supper-Jamaican-Beef-StewB.jpg" class="img-fluid menuPhoto "
+            id="stewBeefPhoto" alt="Stew Beef">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxPP1Gkorxb2HnI0ofUhy5_Je6wDEHGFbD9mOUSWQpJn8sQd9FLA" class="img-fluid menuPhoto "
+            id="stewChickenPhoto" alt="Stew Chicken">
+          <img src="https://i.ibb.co/Dbg5BcW/EAlf3fc-X4-AA-5lp.jpg" class="img-fluid menuPhoto currentImg" id="jerkChickenPhoto" alt="Jerk Chicken">
+          <img src="https://www.seriouseats.com/recipes/images/2013/04/040313-246922-Sunday-Supper-Jamaican-Beef-StewB.jpg" class="img-fluid menuPhoto "
+            id="jerkPorkPhoto" alt="Jerk Pork">
+          <img src="https://i2.wp.com/dishitwithtisha.com/wp-content/uploads/2019/01/IMG_9550.jpg?resize=541%2C361&ssl=1" class="img-fluid menuPhoto "
+            id="curryChickenPhoto" alt="Curry Chicken">
+          <img src="https://food.fnr.sndimg.com/content/dam/images/food/fullset/2015/12/21/0/DV2401H_Jamaican-Curried-Goat_s4x3.jpg.rend.hgtvcom.826.620.suffix/1450905516550.jpeg"
+            class="img-fluid menuPhoto " id="curryGoatPhoto" alt="Curry Goat">
+          <img src="https://i.ytimg.com/vi/VHYSvJ7kqDs/maxresdefault.jpg" class="img-fluid menuPhoto " id="kidneyPhoto" alt="Kidney">
+          <img src="https://i.ytimg.com/vi/t2YIvpUTMy0/maxresdefault.jpg" class="img-fluid menuPhoto " id="friedLiverPhoto" alt="Fried Liver">
+          <img src="https://jamaicancookery.typepad.com/.a/6a017c3167883f970b01b8d2ccac93970c-pi" class="img-fluid menuPhoto " id="friedDumplingPhoto"
+            alt="Fried Dumpling">
+          <img src="https://i.ibb.co/hmQk4tW/jamaica-ackee-saltfish-1800x1800.png" class="img-fluid menuPhoto" id="ackeePhoto" alt="Ackee and Saltfish">
+          <img src="https://jamaicans.com/videos/wp-content/uploads/2016/07/how-to-make-jamaican-salt-macker-3.jpg" class="img-fluid menuPhoto "
+            id="saltMackrelPhoto" alt="Salt Mackrel">
+          <img class="img-fluid menuPhoto " id="escovitchFishPhoto" alt="Escovitch Fish">
+          <img class="img-fluid menuPhoto " id="friedFishPhoto" alt="Fried Fish">
+          <img src="https://jamaicans.com/wp-content/uploads/2016/08/Chef-Noel-Cunningham-Steamed-Fish-with-Okra.jpg" class="img-fluid menuPhoto "
+            id="steamedFishPhoto" alt="Steamed Fish">
+          <img src="https://jamaicans.com/videos/wp-content/uploads/2016/07/how-to-make-jamaican-salt-macker-3.jpg" class="img-fluid menuPhoto "
+            id="chickenPattyPhoto" alt="Chicken Patty">
+          <img src="https://jamaicans.com/videos/wp-content/uploads/2016/07/how-to-make-jamaican-salt-macker-3.jpg" class="img-fluid menuPhoto "
+            id="beefPattyPhoto" alt="Beef Patty">
+          <img src="https://jamaicans.com/videos/wp-content/uploads/2016/07/how-to-make-jamaican-salt-macker-3.jpg" class="img-fluid menuPhoto "
+            id="veggiePattyPhoto" alt="Veggie Patty">
+          <img src="https://jamaicans.com/videos/wp-content/uploads/2016/07/how-to-make-jamaican-salt-macker-3.jpg" class="img-fluid menuPhoto "
+            id="beefPattyPhoto" alt="Beef Patty">
+          <img src="https://jamaicans.com/videos/wp-content/uploads/2016/07/how-to-make-jamaican-salt-macker-3.jpg" class="img-fluid menuPhoto "
+            id="plantainPhoto" alt="Plantain Patty">
+          <img src="https://jamaicans.com/videos/wp-content/uploads/2016/07/how-to-make-jamaican-salt-macker-3.jpg" class="img-fluid menuPhoto "
+            id="macnCheesePhoto" alt="Mac and Cheese">
+          <img src="https://jamaicans.com/videos/wp-content/uploads/2016/07/how-to-make-jamaican-salt-macker-3.jpg" class="img-fluid menuPhoto "
+            id="gravyWhitePhoto" alt="White Rice with Gravy">
+          <img src="https://jamaicans.com/videos/wp-content/uploads/2016/07/how-to-make-jamaican-salt-macker-3.jpg" class="img-fluid menuPhoto "
+            id="ricePeasPhoto" alt="Rice and Peas">
+          <img src="https://jamaicans.com/videos/wp-content/uploads/2016/07/how-to-make-jamaican-salt-macker-3.jpg" class="img-fluid menuPhoto "
+            id="gravyRicePeasPhoto" alt="Rice and Peas with Gravy">
+
+      </div>
+
+
+      <div class="col-6 col-md-3 price mainMenuBreakfast">
+        <h2 id="maintitlebody" class="mainMenuHeading">
+          <br> Breakfast
+        </h2>
+        <h4 id="maintitlebody" class="mainMenuHeading">Breakfast is served with a dumpling, bananas, and yams</h4>
+        <hr/>
+        <div id="callallou">
+          <button class="menuItemTitle">Callaloo</button>
+          <br>
+          <button class="priceButton" id="Small">9.00</button>
+          <button class="priceButton" id="Medium">11.00</button>
+          <button class="priceButton" id="Large">13.00</button>
+        </div>
+        <div id="kidney">
+          <button class="menuItemTitle">Kidney</button>
+          <br>
+          <button class="priceButton" id="Small">9.00</button>
+          <button class="priceButton" id="Medium">11.00</button>
+          <button class="priceButton" id="Large">13.00</button>
+        </div>
+        <div id="ackee">
+          <button class="menuItemTitle">Ackee & Salt Fish</button>
+          <br>
+          <button class="priceButton" id="Small"> 10.00</button>
+          <button class="priceButton" id="Medium">12.00</button>
+          <button class="priceButton" id="Large">14.00</button>
+        </div>
+        <div id="friedLiver">
+          <button class="menuItemTitle">Fried Liver</button>
+          <br>
+          <button class="priceButton" id="Small">9.00</button>
+          <button class="priceButton" id="Medium">11.00</button>
+          <button class="priceButton" id="Large">13.00</button>
+        </div>
+        <div id="saltMackrel">
+          <button class="menuItemTitle">Salt Mackrel</button>
+          <br>
+          <button class="priceButton" id="Small">9.00</button>
+          <button class="priceButton" id="Medium">11.00</button>
+          <button class="priceButton" id="Large">13.00</button>
+        </div>
+      </div>
+      <div class="col-6 col-md-3 price mainMenuPart3">
+        <h2 id="maintitlebody" class="mainMenuHeading">
+          <br>Soups / Porridge
+        </h2>
+        <hr/>
+        <div id="redPeasSoup">
+          <button class="menuItemTitle">Red-Peas Soup</button>
+          <br>
+          <button class="priceButton" id="Small">4.00</button>
+          <button class="priceButton" id="Medium">6.00</button>
+          <button class="priceButton" id="Large">10.00</button>
+        </div>
+        <div id="chickenSoup">
+          <button class="menuItemTitle">Chicken Soup</button>
+          <br>
+          <button class="priceButton" id="Small">4.00</button>
+          <button class="priceButton" id="Medium">6.00</button>
+          <button class="priceButton" id="Large">10.00</button>
+        </div>
+        <div id="cowHeadSoup">
+          <button class="menuItemTitle">Cow Head Soup</button>
+          <br>
+          <button class="priceButton" id="Small">4.00</button>
+          <button class="priceButton" id="Medium">6.00</button>
+          <button class="priceButton" id="Large">10.00</button>
+        </div>
+        <div id="bananaPorridge">
+          <button class="menuItemTitle">Banana Porridge</button>
+          <br>
+          <button class="priceButton" id="Small">4.00</button>
+          <button class="priceButton" id="Medium">5.50</button>
+          <button class="priceButton" id="Large">10.00</button>
+        </div>
+      </div>
+      <div class="col-6 col-md-3 price mainMenuPart1">
+        <h2 id="maintitlebody" class="mainMenuHeading">
+          Lunch &
+          <br>Dinner
+        </h2>
+        <h4 id="maintitlebody" class="mainMenuHeading">Lunch/Dinner is served with rice and peas, gravy, and vegetables.</h4>
+        <hr/>
+        <div id="friedChicken">
+          <button class="menuItemTitle">Fried Chicken</button>
+          <br>
+          <button class="priceButton" id="Small">9.50</button>
+          <button class="priceButton" id="Medium">11.00</button>
+          <button class="priceButton" id="Large">13.00</button>
+        </div>
+        <div id="oxtail">
+          <button class="menuItemTitle">Oxtail</button>
+          <br>
+          <button class="priceButton" id="Small">13.00</button>
+          <button class="priceButton" id="Medium">17.00</button>
+          <button class="priceButton" id="Large">22.00</button>
+        </div>
+        <div id="cowFoot">
+          <button class="menuItemTitle">Cow Foot</button>
+          <br>
+          <button class="priceButton" id="Small">10.00</button>
+          <button class="priceButton" id="Medium">12.00</button>
+          <button class="priceButton" id="Large">14.00</button>
+        </div>
+        <div id="stewPeas">
+          <button class="menuItemTitle">Stew Peas</button>
+          <br>
+          <button class="priceButton" id="Small">10.00</button>
+          <button class="priceButton" id="Medium">12.00</button>
+          <button class="priceButton" id="Large">13.50</button>
+        </div>
+        <div id="stewBeef">
+          <button class="menuItemTitle">Stew Beef</button>
+          <br>
+          <button class="priceButton" id="Small">11.00</button>
+          <button class="priceButton" id="Medium">14.00</button>
+          <button class="priceButton" id="Large">17.00</button>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-3 price mainMenuPart3">
+        <h4 id="maintitlebody" class="mainMenuHeading2">
+          <br>
+          <br>
+        </h4>
+        <hr/>
+        <div id="stewChicken">
+          <button class="menuItemTitle">Stew Chicken</button>
+          <br>
+          <button class="priceButton" id="Small">9.00</button>
+          <button class="priceButton" id="Medium">11.50</button>
+          <button class="priceButton" id="Large">13.50</button>
+        </div>
+        <div id="jerkPork">
+          <button class="menuItemTitle">Jerk Pork</button>
+          <br>
+          <button class="priceButton" id="Small"> 12.00</button>
+          <button class="priceButton" id="Medium">14.50</button>
+          <button class="priceButton" id="Large">16.50</button>
+        </div>
+        <div id="jerkChicken">
+          <button class="menuItemTitle">Jerk Chicken</button>
+          <br>
+          <button class="priceButton" id="Small">9.50</button>
+          <button class="priceButton" id="Medium">12.00</button>
+          <button class="priceButton" id="Large">14.00</button>
+        </div>
+        <div id="curryChicken">
+          <button class="menuItemTitle">Curry Chicken</button>
+          <br>
+          <button class="priceButton" id="Small">9.50</button>
+          <button class="priceButton" id="Medium">11.50</button>
+          <button class="priceButton" id="Large">13.50</button>
+        </div>
+        <div id="curryGoat">
+          <button class="menuItemTitle">Curry Goat</button>
+          <br>
+          <button class="priceButton" id="Small">12.00</button>
+          <button class="priceButton" id="Medium">14.00</button>
+          <button class="priceButton" id="Large">16.50</button>
+        </div>
+      </div>
+      <div class="col-6 col-md-3 price mainMenuPart2">
+        <h2 id="maintitlebody" class="mainMenuHeading">
+          Whole Fish
+        </h2>
+        <hr>
+        <div id="escovitchFish">
+          <button class="menuItemTitle">Escovitch Fish</button>
+          <br>
+          <button class="priceButton" id="Single">14.50</button>
+        </div>
+        <div id="friedFish">
+          <button class="menuItemTitle">Fried Fish</button>
+          <br>
+          <button class="priceButton" id="Single">16.50</button>
+        </div>
+        <div id="steamedFish">
+          <button class="menuItemTitle">Steamed Fish</button>
+          <br>
+          <button class="priceButton" id="Single">13.50</button>
+        </div>
+      </div>
+      <div class="col-6 col-md-3 price mainMenuKids">
+        <h2 id="maintitlebody" class="mainMenuHeading">
+          Kid's Meal
+        </h2>
+        <hr>
+        <div id="escovitchFish">
+          <button class="menuItemTitle">Escovitch Fish</button>
+          <br>
+          <button class="priceButton" id="Small">8.50</button>
+          <button class="priceButton" id="Medium">10.50</button>
+          <button class="priceButton" id="Large">12.50</button>
+        </div>
+
+      </div>
+      <div class="col-6 col-md-3" id="sidemenu">
+
+        <h2 class="mainMenuHeading">Side Menu</h2>
+
+        <hr/>
+        <div id="chickenPatty">
+          <button class="menuItemTitle">Chicken Patty</button>
+          <button class="priceButton">2.75</button>
+        </div>
+        <div id="beefPatty">
+          <button class="menuItemTitle">Beef Patty</button>
+          <button class="priceButton" id="Single">2.75</button>
+        </div>
+        <div id="veggiePatty">
+          <button class="menuItemTitle">Veggie Patty</button>
+          <button class="priceButton" id="Single">2.75</button>
+        </div>
+        <div id="plantain">
+          <button class="menuItemTitle">Plantain</button>
+          <button class="priceButton" id="Single">4.00</button>
+        </div>
+        <div id="macnCheese">
+          <button class="menuItemTitle">Mac & Cheese</button>
+          <button class="priceButton" id="Single">5.50</button>
+        </div>
+        <div id="gravyWhite">
+          <button class="menuItemTitle">White Rice w/Gravy</button>
+          <button class="priceButton" id="Single">4.50</button>
+        </div>
+        <div id="ricePeas">
+          <button class="menuItemTitle">Rice & Peas</button>
+          <button class="priceButton" id="Single">4.50</button>
+        </div>
+        <div id="gravyRicePeas">
+          <button class="menuItemTitle">Rice & Peas w/Gravy</button>
+          <button class="priceButton" id="Single">5.00</button>
+        </div>
+        <div id="steamedVeg">
+            <button class="menuItemTitle">Steamed Vegetables</button>
+            <button class="priceButton" id="Single">4.00</button>
+          </div>
+      </div>
+
+      <div class="col-6 col-md-3 justify-content-center" id="drinkmenu">
+        <h2 class="mainMenuHeading">Drinks</h2>
+        <br>
+        <hr/>
+        <div id="carrotJuice">
+          <button class="menuItemTitle">Carrot Juice</button>
+          <button class="priceButton" id="Single">5.00</button>
+        </div>
+        <div id="irishMoss">
+          <button class="menuItemTitle">Irish Moss</button>
+          <button class="priceButton" id="Single">5.00</button>
+        </div>
+        <div id="fruitPunch">
+          <button class="menuItemTitle">Fruit Punch</button>
+          <button class="priceButton" id="Single">2.50</button>
+        </div>
+        <div id="peanutPunch">
+            <button class="menuItemTitle">Peanut Punch</button>
+            <button class="priceButton" id="Single">5.00</button>
+          </div>
+        <div id="sorrell">
+          <button class="menuItemTitle">Sorrell</button>
+          <button class="priceButton" id="Single">5.00</button>
+        </div>
+        <div id="ting">
+          <button class="menuItemTitle">Ting</button>
+          <button class="priceButton" id="Single">2.50</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="imgModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title col-12" id="imgTitlePlace">
+            </h4>
+            <hr/>
+          </div>
+          <div id="imgPlace">
+          </div>
+          <div class="row no-gutters">
+            <div class="smallColumn col-4">
+              <div id="smallPricePlace"></div> <i class="fa fa-shopping-cart" style="font-size:36px;"></i><br>
+              <button type="button" class="btn btn-success menuButtons" id="smallButton">Small</button>
+            </div>
+            <div class="mediumColumn col-4">
+              <div id="mediumPricePlace"></div><i class="fa fa-shopping-cart" style="font-size:36px;"></i><br>
+              <button type="button" class="btn btn-warning menuButtons" id="mediumButton">Medium </button>
+            </div>
+            <div class="largeColumn col-4">
+              <div id="largePricePlace"></div><i class="fa fa-shopping-cart" style="font-size:36px;"></i><br>
+              <button type="button" class="btn btn-primary menuButtons" id="largeButton">Large</button>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger orderButtonModal" data-toggle="modal" data-dismiss="modal"  id="yourOrderfromModal" data-target="#order">Your Order</button>
+          </div>
+          <button type="button" class="close-button" data-dismiss="modal" aria-hidden="true">×</button>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="modal" id="order">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">
+              <b>Your Order So Far</b>
+            </h4>
+          </div>
+          <div class="row no-gutters checkOutColumn">
+            <div class="col-6"> Dish</div>
+            <div class="col-1"> QTY</div>
+            <div class="col-2"> Price</div>
+            <div class="col-3"> Edit Order</div>
+          </div>
+
+          <div class="row no-gutters menubody">
+            <div class="col-6 modal-body" id="menuNameColumn">
+            </div>
+            <div class="col-1 modal-body menuclass" id="menuQtyColumn">
+            </div>
+            <div class="col-2 modal-body" id="menuPriceColumn">
+            </div>
+            <div class="col-1 modal-body" id="minusbutton">
+            </div>
+            <div class="col-1 modal-body" id="addbutton">
+            </div>
+            <div class="col-1 modal-body" id="removebutton">
+            </div>
+          </div>
+          <div class="row no-gutters totalborder checkOutColumn">
+            <div class="col-1 offset-1 ">Total:</div>
+            <div class="col-2 offset-5" id="totalPrice"></div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" id="checkOutButton"  data-dismiss="modal" onclick="checkOutWhere(),resetDelivery()">
+              Check Out</button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="checkOut">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">
+              <b>Check Out:</b>
+            </h4>
+          </div>
+          <div class="modal-body">
+          <div class="col-12">
+            <form action="/charge" method="post" id="payment-form">
+              <div class="form-row">
+                <div class="col-12 formField">
+                  <label for="name">
+                    <span>
+                      <b>Name:</b>
+                  </label>
+                </div>
+                <input type="text" name="name" placeholder="Alex Van Acker" id="name">
+
+                <div class="col-12 formField">
+                  <label for="phone">
+                    <b> Phone Number: </b>
+                  </label>
+                </div>
+                <input type="number" name="phone" placeholder="203-295-8888" id="phone">
+                <div class="col-12">
+                  <label for="card-element">
+                    <b>Credit or debit card</b>
+                  </label>
+                </div>
+                <div id="card-element">
+                  <!-- A Stripe Element will be inserted here. -->
+                </div>
+                <!-- Used to display form errors. -->
+                <div id="card-errors" role="alert"></div>
+                <div class="col-12 " id="method">
+                  <b>Take Out</b>
+                  <input type="radio" name="deliverymethod" class="with-gap radio" value="takeout" id="takeoutMethod"
+                    checked />
+                  <br>
+                  <b> Delivery&nbsp;  </b>
+                  <input type="radio" name="deliverymethod" class="with-gap radio" value="delivery" id="deliveryMethod"
+                  />
+                </div>
+                <div id='deliveryForm' class="displaynone">
+                  <div class="col-12">
+                    <b>Address</b>
+                  </div>
+                  <div class="col-12 formField">
+                    <input type="text" id="adr" name="address" placeholder="80 County St. 13D">
+                  </div>
+                  <div class="col-12">
+                    <b>City</b>
+                  </div>
+                  <div class="col-12 formField">
+                    <input type="text" id="city" name="city" placeholder="Norwalk">
+                  </div>
+                  <div class="col-12">
+                    <b>State</b>
+                  </div>
+                  <div class="col-12 formField">
+                    <input type="text" id="state" name="state" placeholder="CT">
+                  </div>
+                  <div class="col-12">
+                    <b>Zipcode</b>
+                  </div>
+                  <div class="col-12 formField">
+                    <input type="text" id="zipcode" name="zipcode" placeholder="06851">
+                  </div>
+                  <br>
+                </div>
+
+              </div>
+
+              <button class="btn btn-success">Submit Payment</button>
+            </form>
+          </div>
+          </div>
+          <div class="modal-footer">
+
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row no-gutters" id="caterMenuHeading">
+        <div class="col-12 col-sm-12 mainMenuHeading">
+          <span id="contactformfont">
+            <h1 id="caterTitle">People's Choice Caters!</h1>
+          </span>
+          <br>
+          <h3 id="caterSecondTitle"> For Your Catering Needs, Order Food By Half Tray or Full Tray Using the Menu Below!</h3>
+        </div>
+      </div>
+      <div class="row no-gutters" id="catermenu">
+        <div class="col-4">
+          <div id="jerkChickenCater">
+            <button class="menuItemTitle">Jerk Chickens</button>
+            <button class="priceButton" id="halfTray">60.00</button>
+            <button class="priceButton" id="fullTray">180.00</button>
+          </div>
+          <div id="curryChickenCater">
+            <button class="menuItemTitle">Curry Chicken</button>
+            <button class="priceButton" id="halfTray">55.00</button>
+            <button class="priceButton" id="fullTray">140.00</button>
+          </div>
+          <div id="cowFootCater">
+            <button class="menuItemTitle">Cow Foot</button>
+            <button class="priceButton" id="halfTray">60.00</button>
+            <button class="priceButton" id="fullTray">160.00</button>
+          </div>
+          <div id="jerkPorkCater">
+            <button class="menuItemTitle">Jerk Pork</button>
+            <button class="priceButton" id="halfTray">65.00</button>
+            <button class="priceButton" id="fullTray">165.00</button>
+          </div>
+          <div id="stewChickenCater">
+              <button class="menuItemTitle">Stew Chicken</button>
+              <button class="priceButton" id="halfTray">60.00</button>
+              <button class="priceButton" id="fullTray">150.00</button>
+          </div>
+        </div>
+        <div class="col-4">
+        <div id="stewChicken">
+            <button class="menuItemTitle">Oxtail</button>
+            <button class="priceButton" id="halfTray">120.00</button>
+            <button class="priceButton" id="fullTray">340.00</button>
+          </div>
+          <div id="curryGoat">
+              <button class="menuItemTitle">Curry Goat</button>
+              <button class="priceButton" id="halfTray">90.00</button>
+              <button class="priceButton" id="fullTray">250.00</button>
+          </div>
+          <div id="stewChicken">
+            <button class="menuItemTitle">Fried Chicken</button>
+            <button class="priceButton" id="halfTray">60.00</button>
+            <button class="priceButton" id="fullTray">120.00</button>
+          </div>
+          <div id="stewBeef">
+              <button class="menuItemTitle">Stew Beef</button>
+              <button class="priceButton" id="halfTray">85.00</button>
+              <button class="priceButton" id="fullTray">210.00</button>
+            </div>
+        </div>
+        <div class="col-4">
+
+          <div id="whiteRice">
+            <button class="menuItemTitle">White Rice</button>
+            <button class="priceButton" id="halfTray">20.00</button>
+            <button class="priceButton" id="fullTray">60.00</button>
+          </div>
+          <div id="macNCheeseCater">
+            <button class="menuItemTitle">Mac & Cheese</button>
+            <button class="priceButton" id="halfTray">30.00</button>
+            <button class="priceButton" id="fullTray">80.00</button>
+          </div>
+          <div id="vegetables">
+              <button class="menuItemTitle">Vegetables</button>
+              <button class="priceButton" id="halfTray">15.00</button>
+              <button class="priceButton" id="fullTray">40.00</button>
+            </div>
+            <div id="plantain">
+              <button class="menuItemTitle">Plantain</button>
+              <button class="priceButton" id="halfTray">25.00</button>
+              <button class="priceButton" id="fullTray">65.00</button>
+            </div>
+        </div>
+        <div class="col-12">
+        <span id="cateringdesc">
+          <span id="contactformfont">
+            <h5><span>For orders over $300,</span><br> <span>call us at
+            <a href="tel:203-838-8272" id="telephone"> (203) 838-8272</a></span> <br><span>for a speical discount!</span></h5>
+          </span>
+          
+    </div>
+
+  </div>
+
+
+
+
+  <div class="footer">
+    <p>Contact Information:
+      <a href="malito:norwalk.youngson@gmail.com">norwalk.youngson@gmailcom</a>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+      <script src="frontendjs.js"></script>
+  </div>
+
+  </div>
+ 
+</body>
+
+</html>
