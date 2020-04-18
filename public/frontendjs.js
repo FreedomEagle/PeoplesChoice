@@ -4,24 +4,28 @@ $(".menuBar").click(function() {
   return false;
 });
 
+$('#yourOrder').click(function(){
+console.log('hii')
+})
 /*linking Order Menu Bar with Modal*/
+//
+
 $("#yourOrder").click(function(){
+	console.log("yaus")
   $("#order").modal();
   });
 $("#yourOrderFromModal").click(function(){
   $("#order").modal();
   });
+ 
 /* Img Modal*/
 const menuArray = [];
-
-
 
 $(".menuItemTitle").click(function(){
   const itemParent = $(this).parent()[0];
     // Getting the image of the button clicked 
   const imgTitle = $(itemParent).find("button")[0].innerHTML
   const img =$("#"+itemParent.id+"Photo")[0]
-  
   var createImage = function(src, title) {
     var img   = new Image();
     img.src   = src;
@@ -33,7 +37,6 @@ $(".menuItemTitle").click(function(){
     $(imgTitlePlace).html(imgTitle)
     $(imgPlace).html(createImage(img.src,imgTitle))
     $("#imgModal").modal();
-
   // Getting the price of the button clicked  
   const smallPrice = $(itemParent).find("#Small").html()
   const mediumPrice = $(itemParent).find("#Medium").html()
@@ -41,7 +44,6 @@ $(".menuItemTitle").click(function(){
   const singlePrice = $(itemParent).find(".priceButton").html()
   const halfTrayPrice= $(itemParent).find("#halfTray").html()
   const fullTrayPrice = $(itemParent).find("#fullTray").html()
-
   if(mediumPrice){
     $(".smallColumn").removeClass("displaynone")
     $(".largeColumn").removeClass("displaynone")
@@ -65,9 +67,7 @@ $(".menuItemTitle").click(function(){
   $(".smallColumn").addClass("displaynone")
   $(".largeColumn").addClass("displaynone")
   $("#midSizePhoto").addClass("displaynone")
- }
-  
-  });
+ }  });
 /* Img Modal Buttons */
 
 
@@ -555,3 +555,5 @@ function checkDaySoup(){
   }
 }
 checkDaySoup()
+
+console.log('hello')

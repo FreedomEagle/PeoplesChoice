@@ -1,0 +1,161 @@
+<div class="modal" id="imgModal">
+	<div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title col-12" id="imgTitlePlace">
+            </h4>
+            <hr/>
+          </div>
+          <div id="imgPlace">
+          </div>
+          <div class="row no-gutters">
+            <div class="smallColumn col-4">
+              <div id="smallPricePlace"></div> <i class="fa fa-shopping-cart" style="font-size:36px;"></i><br>
+              <button type="button" class="btn btn-success menuButtons" id="smallButton">Small</button>
+            </div>
+            <div class="mediumColumn col-4">
+              <div id="mediumPricePlace"></div><i class="fa fa-shopping-cart" style="font-size:36px;"></i><br>
+              <button type="button" class="btn btn-warning menuButtons" id="mediumButton">Medium </button>
+            </div>
+            <div class="largeColumn col-4">
+              <div id="largePricePlace"></div><i class="fa fa-shopping-cart" style="font-size:36px;"></i><br>
+              <button type="button" class="btn btn-primary menuButtons" id="largeButton">Large</button>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger orderButtonModal" data-toggle="modal" data-dismiss="modal"  id="yourOrderfromModal" data-target="#order">Your Order</button>
+          </div>
+          <button type="button" class="close-button" data-dismiss="modal" aria-hidden="true">×</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="order">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">
+              <b>Your Order So Far</b>
+            </h4>
+          </div>
+          <div class="row no-gutters checkOutColumn">
+            <div class="col-6"> Dish</div>
+            <div class="col-1"> QTY</div>
+            <div class="col-2"> Price</div>
+            <div class="col-3"> Edit Order</div>
+          </div>
+
+          <div class="row no-gutters menubody">
+            <div class="col-6 modal-body" id="menuNameColumn">
+            </div>
+            <div class="col-1 modal-body menuclass" id="menuQtyColumn">
+            </div>
+            <div class="col-2 modal-body" id="menuPriceColumn">
+            </div>
+            <div class="col-1 modal-body" id="minusbutton">
+            </div>
+            <div class="col-1 modal-body" id="addbutton">
+            </div>
+            <div class="col-1 modal-body" id="removebutton">
+            </div>
+          </div>
+          <div class="row no-gutters totalborder checkOutColumn">
+            <div class="col-1 offset-1 ">Total:</div>
+            <div class="col-2 offset-5" id="totalPrice"></div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" id="checkOutButton"  data-dismiss="modal" onclick="checkOutWhere(),resetDelivery()">
+              Check Out</button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="checkOut">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">
+              <b>Check Out:</b>
+            </h4>
+          </div>
+          <div class="modal-body">
+          <div class="col-12">
+            <form action="/charge" method="post" id="payment-form">
+              <div class="form-row">
+                <div class="col-12 formField">
+                  <label for="name">
+                    <span>
+                      <b>Name:</b>
+                  </label>
+                </div>
+                <input type="text" name="name" placeholder="Alex Van Acker" id="name">
+
+                <div class="col-12 formField">
+                  <label for="phone">
+                    <b> Phone Number: </b>
+                  </label>
+                </div>
+                <input type="number" name="phone" placeholder="203-295-8888" id="phone">
+                <div class="col-12">
+                  <label for="card-element">
+                    <b>Credit or debit card</b>
+                  </label>
+                </div>
+                <div id="card-element">
+                  <!-- A Stripe Element will be inserted here. -->
+                </div>
+                <!-- Used to display form errors. -->
+                <div id="card-errors" role="alert"></div>
+                <div class="col-12 " id="method">
+                  <b>Take Out</b>
+                  <input type="radio" name="deliverymethod" class="with-gap radio" value="takeout" id="takeoutMethod"
+                    checked />
+                  <br>
+                  <b> Delivery&nbsp;  </b>
+                  <input type="radio" name="deliverymethod" class="with-gap radio" value="delivery" id="deliveryMethod"
+                  />
+                </div>
+                <div id='deliveryForm' class="displaynone">
+                  <div class="col-12">
+                    <b>Address</b>
+                  </div>
+                  <div class="col-12 formField">
+                    <input type="text" id="adr" name="address" placeholder="80 County St. 13D">
+                  </div>
+                  <div class="col-12">
+                    <b>City</b>
+                  </div>
+                  <div class="col-12 formField">
+                    <input type="text" id="city" name="city" placeholder="Norwalk">
+                  </div>
+                  <div class="col-12">
+                    <b>State</b>
+                  </div>
+                  <div class="col-12 formField">
+                    <input type="text" id="state" name="state" placeholder="CT">
+                  </div>
+                  <div class="col-12">
+                    <b>Zipcode</b>
+                  </div>
+                  <div class="col-12 formField">
+                    <input type="text" id="zipcode" name="zipcode" placeholder="06851">
+                  </div>
+                  <br>
+                </div>
+
+              </div>
+
+              <button class="btn btn-success">Submit Payment</button>
+            </form>
+          </div>
+          </div>
+          <div class="modal-footer">
+
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
